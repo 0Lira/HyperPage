@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/hg1e6e99/public_html/
+    - export DEPLOYPATH=/home2/hg1e6e99/hyperpage.com.br/
     - /bin/cp -r * $DEPLOYPATH
