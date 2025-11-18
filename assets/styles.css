@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 :root {
   /*--primary-color: #2563eb;*/
   --secondary-color: #1e40af;
@@ -20,7 +19,6 @@ body {
   line-height: 1.6;
   color: var(--text-color);
 }
-
 /* Header & Navigation */
 header {
   background-color: rgb(255, 255, 255);
@@ -28,8 +26,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
+  contain: layout paint;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,7 +37,10 @@ nav {
   margin: 0 auto;
   height: 80px;
 }
-
+.orb,
+.shape {
+  will-change: transform;
+}
 .logo {
   font-size: 1.2rem;
   font-weight: bold;
@@ -70,35 +71,102 @@ nav {
   margin-left: 2rem;
   transition: color 0.3s ease;
 }
-
 .nav-links a:hover {
   color: var(--primary-color);
 }
-
+/* ===== Orb ===== */
+.orb {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #822ecc, #2679e3);
+  filter: blur(2px);
+  opacity: 0.8;
+}
+/* Esferas em posições diferentes */
+.orb-left {
+  left: 10%;
+  top: 50%;
+  animation: orbit-right 7s linear infinite;
+}
+.orb-right {
+  right: 10%;
+  top: 50%;
+  animation: orbit-left 9s linear infinite;
+}
+/* ===== Animações ===== */
+@keyframes orbit-right {
+  0% {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+@keyframes orbit-left {
+  0% {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(40px) rotate(360deg);
+  }
+}
+/* ===== Formas geométricas flutuantes ===== */
+.shape {
+  position: absolute;
+  opacity: 0.4;
+  animation: float 6s ease-in-out infinite alternate;
+}
+.square {
+  width: 40px;
+  height: 40px;
+  background: #822ecc;
+  top: 30%;
+  left: 20%;
+  animation-delay: 0s;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 45px solid #01d4e9;
+  top: 70%;
+  left: 75%;
+  animation-delay: 2s;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #01d4e9;
+  top: 55%;
+  left: 45%;
+  animation-delay: 1s;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateY(-30px) rotate(360deg) scale(1.2);
+  }
+}
 /* Hero Section */
 .hero {
-  /*background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)),
-    url("hero-bg.jpg");*/
-  background: #822ecc;
-  background: linear-gradient(
-    90deg,
-    rgba(130, 46, 204, 1) 0%,
-    rgba(1, 212, 233, 1) 50%,
-    rgba(38, 121, 227, 1) 100%
-  );
-  /*background-size: cover;*/
+  background-image: url(/assets/images/banner.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000000;
-  background-image: url(/assets/images/banner.jpg);
   height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
   color: white;
   padding-top: 80px;
 }
-
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
@@ -108,12 +176,10 @@ nav {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
-
 /* Buttons */
 .cta-button {
   display: inline-block;
@@ -124,17 +190,14 @@ nav {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: var(--secondary-color);
 }
-
 /* Services Section */
 .services {
   padding: 5rem 1rem;
   background-color: var(--light-bg);
 }
-
 .services h2,
 .portfolio h2,
 .contact h2 {
@@ -142,7 +205,6 @@ nav {
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }
-
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -150,7 +212,6 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .service-card {
   background: white;
   padding: 2rem;
@@ -159,22 +220,18 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
-
 .service-card:hover {
   transform: translateY(-5px);
 }
-
 .service-card i {
   font-size: 2.5rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
-
 /* Portfolio Section */
 .portfolio {
   padding: 5rem 1rem;
 }
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -182,21 +239,18 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: 5px;
   height: 250px;
 }
-
 .portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-
 .portfolio-overlay {
   position: absolute;
   top: 0;
@@ -212,21 +266,17 @@ nav {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
 }
-
 .portfolio-item:hover img {
   transform: scale(1.1);
 }
-
 /* Contact Section */
 .contact {
   padding: 5rem 1rem;
   background-color: var(--light-bg);
 }
-
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -234,13 +284,11 @@ nav {
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
-
 #contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 #contact-form input,
 #contact-form textarea {
   padding: 1rem;
@@ -248,34 +296,30 @@ nav {
   border-radius: 5px;
   font-size: 1rem;
 }
-
 #contact-form textarea {
   height: 150px;
   resize: vertical;
 }
-
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .contact-item {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .contact-item i {
   font-size: 1.5rem;
   color: var(--primary-color);
 }
-
 /* Footer */
 footer {
   background-color: var(--light-bg);
   color: var(--text-color);
   padding: 2rem 1rem;
+  position: relative;
 }
 .footerlogo {
   background: #822ecc;
@@ -292,19 +336,29 @@ footer {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;
+  justify-content: space-around;*/
+  text-align: center;
+  position: relative;
+}
+.footerlogo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
-
+  .logo {
+    justify-content: center;
+  }
   .hero h1 {
     font-size: 2rem;
   }
-
   .contact-container {
     grid-template-columns: 1fr;
   }
@@ -312,5 +366,10 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .footerlogo {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
   }
 }

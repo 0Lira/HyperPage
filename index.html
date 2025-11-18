@@ -2,24 +2,100 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    
+    <link rel="preload" as="image" href="assets/images/banner.webp" type="image/webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hyperpage - Desenvolvimento Web Profissional</title>
-    <link rel="stylesheet" href="/assets/styles.css" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Hyperpage - Desenvolvimento Web Profissional | Sites e Landing Pages
+    </title>
+    <meta
+      name="description"
+      content="Desenvolvimento de sites profissionais e landing pages otimizadas. Transforme sua presença digital e converta visitantes em clientes. Orçamento sem compromisso."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvimento web, criação de sites, landing pages, sites profissionais, design responsivo, desenvolvimento web profissional, sites para empresas"
+    />
+    <meta name="author" content="Hyperpage" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.hyperpage.com.br" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.hyperpage.com.br" />
+    <meta
+      property="og:title"
+      content="Hyperpage - Desenvolvimento Web Profissional"
+    />
+    <meta
+      property="og:description"
+      content="Sites e Landing Pages profissionais que convertem visitantes em clientes. Solicite seu orçamento!"
+    />
+    <meta
+      property="og:image"
+      content="https://www.hyperpage.com.br/assets/images/hypericonpng.png"
+    />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.hyperpage.com.br" />
+    <meta
+      name="twitter:title"
+      content="Hyperpage - Desenvolvimento Web Profissional"
+    />
+    <meta
+      name="twitter:description"
+      content="Sites e Landing Pages profissionais que convertem visitantes em clientes"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.hyperpage.com.br/assets/images/hypericonpng.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/hypericonpng.png" />
+    <link rel="apple-touch-icon" href="assets/images/hypericonpng.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Hyperpage",
+        "description": "Desenvolvimento de sites profissionais e landing pages",
+        "url": "https://www.hyperpage.com.br",
+        "telephone": "+55-11-94581-9258",
+        "email": "hyperpage@hotmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00"
+      }
+    </script>
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">
           <img
-            src="/assets/images/hypericon.jpg"
+            src="assets/images/hypericonpng.png"
             alt="Hyperpage Logo"
             class="logo"
-            width="10%"
-            height="10%"
+            width="13%"
+            height="13%"
           />
           <h2 class="nomelogo">Hyperpage</h2>
         </div>
@@ -30,7 +106,13 @@
         </div>
       </nav>
     </header>
-
+    <!-- Esferas giratórias laterais -->
+    <div class="orb orb-left"></div>
+    <div class="orb orb-right"></div>
+    <!--Formas geométricas flutuantes-->
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+    <div class="shape circle"></div>
     <section class="hero">
       <div class="hero-content">
         <h1>Transforme sua presença digital</h1>
@@ -38,10 +120,14 @@
           Sites e Landing Pages profissionais que convertem visitantes em
           clientes
         </p>
-        <a href="#contato" class="cta-button">Solicitar Orçamento</a>
+        <a
+          href="https://wa.me/5511945819258?text=Ol%C3%A1%20vim%20pela%20Hyperpage%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!!"
+          target="_blank"
+          class="cta-button"
+          >Solicitar Orçamento</a
+        >
       </div>
     </section>
-
     <section id="servicos" class="services">
       <h2>Nossos Serviços</h2>
       <div class="service-grid">
@@ -62,42 +148,49 @@
         </div>
       </div>
     </section>
-
     <section id="portfolio" class="portfolio">
       <h2>Portfólio</h2>
       <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="/assets/images/image1.png" alt="Projeto 1" />
+        <div class="portfolio-item"><a href="https://0lira.github.io/my-react-portfolio" target="_blank" style="text-decoration:none; color: #f3f4f6;">
+          <img src="assets/images/image1.webp" alt="Projeto 1" />
           <div class="portfolio-overlay">
             <h3>Projeto 1</h3>
-            <p>Portiólio Pessoal</p>
+            <p>Portifólio Pessoal</p></a>
           </div>
         </div>
         <div class="portfolio-item">
-          <img src="/assets/images/image2.png" alt="Projeto 2" />
+          <a href="https://0lira.github.io/LandingPageCurso" target="_blank" style="text-decoration:none; color: #f3f4f6;">
+          <img src="assets/images/image2.webp" alt="Projeto 2" />
           <div class="portfolio-overlay">
             <h3>Projeto 2</h3>
-            <p>Landing Page</p>
+            <p>Landing Page</p></a>
           </div>
         </div>
         <div class="portfolio-item">
-          <img src="assets/images/image3.png" alt="Projeto 3" />
+          <a href="https://0lira.github.io/Dra.-Luana-Lira" target="_blank" style="text-decoration:none; color: #f3f4f6;">
+          <img src="assets/images/image3.webp" alt="Projeto 3" />
           <div class="portfolio-overlay">
             <h3>Projeto 3</h3>
-            <p>Site Institucional</p>
+            <p>Site Institucional</p></a>
           </div>
         </div>
       </div>
     </section>
-
     <section id="contato" class="contact">
       <h2>Entre em Contato</h2>
       <div class="contact-container">
-        <form id="contact-form">
-          <input type="text" placeholder="Nome" required />
-          <input type="email" placeholder="E-mail" required />
-          <input type="tel" placeholder="Telefone" required />
-          <textarea placeholder="Descreva seu projeto" required></textarea>
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xwpappdj"
+          method="POST">
+          <input type="text" name="nome" placeholder="Nome" required />
+          <input type="email" name="email" placeholder="E-mail" required />
+          <input type="tel" name="telefone" placeholder="Telefone" required />
+          <textarea
+            name="mensagem"
+            placeholder="Descreva seu projeto"
+            required
+          ></textarea>
           <button type="submit" class="cta-button">Enviar Mensagem</button>
         </form>
         <div class="contact-info">
@@ -112,14 +205,12 @@
         </div>
       </div>
     </section>
-
     <footer>
       <div class="footer-content">
         <h3 class="footerlogo">Hyperpage</h3>
         <p>&copy; 2025 Hyperpage. Todos os direitos reservados.</p>
       </div>
     </footer>
-
-    <script src="/assets/script.js"></script>
+<script src="assets/script.js" defer></script>
   </body>
 </html>
