@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato | Hyperpage - Solicite Seu Orçamento</title>
+    <meta
+      name="description"
+      content="Entre em contato com a Hyperpage. Solicite um orçamento para seu projeto de site ou landing page. Atendimento direto e personalizado."
+    />
+    <meta
+      name="keywords"
+      content="contato hyperpage, orçamento site, desenvolvimento web, email contato"
+    />
+    <meta name="author" content="Hyperpage" />
+    <link rel="icon" type="image/png" href="assets/images/hypericon32x32.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header>
+      <nav>
+        <div class="nav-inner">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/hypericonpng.png" alt="Hyperpage Logo" />
+            <span class="nav-logo-text">Hyperpage</span>
+          </a>
+          <div class="nav-links">
+            <a href="index.html">Início</a><a href="about.html">Sobre</a
+            ><a href="services.html">Serviços</a><a href="plans.html">Planos</a
+            ><a href="contact.html" class="active">Contato</a>
+          </div>
+          <div class="nav-right">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Alternar tema"
+            ></button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Início</a><a href="about.html">Sobre</a
+        ><a href="services.html">Serviços</a><a href="plans.html">Planos</a
+        ><a href="contact.html">Contato</a>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <section class="page-hero">
+        <span class="section-label">Fale conosco</span>
+        <h1>Vamos <em>Conversar</em></h1>
+        <p>
+          Pronto para transformar sua presença digital? Entre em contato conosco
+          agora mesmo.
+        </p>
+      </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="wrapper">
+      <section class="contact-section anim">
+        <div class="contact-grid">
+          <div class="form-card">
+            <h2>Solicite Seu Orçamento</h2>
+            <p class="form-subtitle">
+              Preencha o formulário abaixo e retornaremos em breve com uma
+              proposta personalizada.
+            </p>
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/xwpappdj"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="nome">Nome Completo *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefone">WhatsApp *</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(11) 91234-5678"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="servico">Qual serviço você procura? *</label>
+                <select id="servico" name="servico" required>
+                  <option value="">Selecione uma opção...</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Site Institucional">Site Institucional</option>
+                  <option value="Portfólio">Portfólio</option>
+                  <option value="SEO">SEO</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Descreva seu projeto *</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Conte um pouco sobre o que você precisa..."
+                  required
+                ></textarea>
+              </div>
+              <div class="form-security">
+                <i class="fas fa-lock"></i> Seus dados estão seguros e serão
+                usados apenas para responder seu contato.
+              </div>
+              <button type="submit" class="submit-btn">Enviar Orçamento</button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <h2>Outras Formas de Contato</h2>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="ci-body">
+                  <h3>WhatsApp</h3>
+                  <p>Prefere conversar por mensagem? Fale direto conosco.</p>
+                  <a
+                    href="https://wa.me/5511945819258?text=Ol%C3%A1!%20Quero%20saber%20como%20posso%20melhorar%20minha%20presen%C3%A7a%20digital."
+                    target="_blank"
+                    >(11) 94581-9258</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fab fa-instagram"></i></div>
+                <div class="ci-body">
+                  <h3>Instagram</h3>
+                  <p>Acompanhe nossas dicas e trabalhos.</p>
+                  <a href="https://www.instagram.com/hyperpage_" target="_blank"
+                    >@hyperpage_</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                <div class="ci-body">
+                  <h3>E-mail</h3>
+                  <p>Prefere enviar um e-mail? Responderemos rapidinho.</p>
+                  <span>hyperpage@hotmail.com</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                <div class="ci-body">
+                  <h3>Telefone</h3>
+                  <p>Quer falar direto por ligação?</p>
+                  <span>(11) 94581-9258</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="wrapper">
+      <section class="steps-section anim">
+        <span class="section-label">Processo</span>
+        <h2 class="section-title">O que Esperar</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>Você Envia</h3>
+            <p>Preenche o formulário com os detalhes do seu projeto.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Analisamos</h3>
+            <p>Estudamos seu projeto e entendemos suas necessidades.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>Respondemos</h3>
+            <p>
+              Você recebe uma proposta personalizada com timeline e
+              investimento.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h3>Conversamos</h3>
+            <p>Esclarecemos dúvidas. Sem pressa. Seu projeto é único.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-logo">Hyperpage</div>
+      <p>&copy; 2025 Hyperpage. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
