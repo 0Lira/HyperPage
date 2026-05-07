@@ -17,6 +17,13 @@ burger.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
 });
 
+//faq
+document
+  .querySelectorAll(".faq-question")
+  .forEach((q) =>
+    q.addEventListener("click", () => q.parentElement.classList.toggle("open")),
+  );
+
 // Scroll animations
 const observer = new IntersectionObserver(
   (entries) => {
